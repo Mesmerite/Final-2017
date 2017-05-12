@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Test Level-->
+<ItemCollection>
+  <Items>
+  	
+  	<!-- PLAYER -->
+  	<Item type ="3">
+      <posX>-7.2</posX>
+      <posY>-4.1</posY>
+    </Item>
+
+    <!-- BACKGROUND -->
+  	<Item type ="11">
+      <posX>-0.01</posX>
+      <posY>-0.04</posY>
+    </Item> 
+
+    <!-- ENEMIES -->
+    <Item type ="4">
+      <posX>-3.95</posX>
+      <posY>-1.16</posY>
+    </Item>
+     <Item type ="4">
+      <posX>-4.3</posX>
+      <posY>2.37</posY>
+    </Item>
+   	 <Item type ="4">
+      <posX>0.3</posX>
+      <posY>-2.65</posY>
+    </Item>
+
+    <Item type ="26">
+      <posX>6.5</posX>
+      <posY>-1.5</posY>
+    </Item>
+
+    <!-- ITEMS -->
+   	<Item type ="7">
+      <posX>-5.0</posX>
+      <posY>4.2</posY>
+    </Item>
+    <Item type ="7">
+      <posX>-0.01</posX>
+      <posY>-0.04</posY>
+    </Item>
+     <Item type ="7">
+      <posX>6.4</posX>
+      <posY>3.0</posY>
+    </Item>
+
+    <!-- BUTTONS -->
+    <Item type ="19">
+      <posX>5.8</posX>
+      <posY>-2.6</posY>
+    </Item>
+    <Item type ="18">
+      <posX>-3.5</posX>
+      <posY>4.15</posY>
+    </Item>
+
+    <!-- FRIEND BOT -->
+   	<Item type ="21">
+      <posX>-5.3</posX>
+      <posY>-4.05</posY>
+    </Item>
+
+    <!-- DOORS -->
+   	<Item type ="9">
+      <posX>-2.3</posX>
+      <posY>-4.01</posY>
+    </Item>
+   	<Item type ="10">
+      <posX>5.3</posX>
+      <posY>3.5</posY>
+    </Item>
+
+	<!-- PILLAR -->
+	<Item type ="17">
+      <posX>-4.7</posX>
+      <posY>-4.01</posY>
+    </Item>
+
+
+    <!-- WALLS -->
+    <Item type ="12">
+      <posX>-3.7</posX>
+      <posY>-2.51</posY>
+    </Item>
+    <Item type ="12">
+      <posX>-0.7</posX>
+      <posY>-1.505</posY>
+    </Item>
+
+     <Item type ="12">
+      <posX>-5.5</posX>
+      <posY>-1.5</posY>
+    </Item>
+	<Item type ="12">
+      <posX>-5.5</posX>
+      <posY>-0.495</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>0.5</posX>
+      <posY>-4.01</posY>
+    </Item>
+
+     <Item type ="12">
+      <posX>3.5</posX>
+      <posY>-1.0</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>-2.5</posX>
+      <posY>-4.01</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>1.1</posX>
+      <posY>-0.004</posY>
+    </Item>
+
+     <Item type ="12">
+      <posX>-5.5</posX>
+      <posY>-4.01</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>-4.5</posX>
+      <posY>2.51</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>-3.7</posX>
+      <posY>4.0</posY>
+    </Item>
+     <Item type ="12">
+      <posX>-3.7</posX>
+      <posY>5.0</posY>
+    </Item>
+
+     <Item type ="12">
+      <posX>-0.7</posX>
+      <posY>2.505</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>5.5</posX>
+      <posY>-1.5</posY>
+    </Item>
+     <Item type ="12">
+      <posX>5.5</posX>
+      <posY>-2.505</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>3.3</posX>
+      <posY>3.006</posY>
+    </Item>
+    <Item type ="12">
+      <posX>6.3</posX>
+      <posY>3.006</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>6.3</posX>
+      <posY>1.505</posY>
+    </Item>
+
+    <Item type ="12">
+      <posX>4.3</posX>
+      <posY>4.012</posY>
+    </Item>
+    <Item type ="12">
+      <posX>4.3</posX>
+      <posY>5.012</posY>
+    </Item>
+
+     <Item type ="12">
+      <posX>-3.7</posX>
+      <posY>1.006</posY>
+    </Item>
+   
+
+  	<!-- PLATFORM -->
+  	<Item type ="0">
+      <posX>-5.5</posX>
+      <posY>-3.26</posY>
+    </Item>
+	<Item type ="0">
+      <posX>-4.5</posX>
+      <posY>-3.26</posY>
+    </Item>
+
+   	<Item type ="0">
+      <posX>-3.7</posX>
+      <posY>-1.76</posY>
+    </Item>
+	<Item type ="1">
+      <posX>-2.7</posX>
+      <posY>-1.76</posY>
+    </Item>
+	<Item type ="0">
+      <posX>-1.7</posX>
+      <posY>-1.76</posY>
+    </Item>
+
+    <Item type ="0">
+      <posX>-2.5</posX>
+      <posY>-3.26</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-1.5</posX>
+      <posY>-3.26</posY>
+    </Item>
+
+    <Item type ="0">
+      <posX>-0.7</posX>
+      <posY>-0.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>0.3</posX>
+      <posY>-0.76</posY>
+    </Item>
+
+   	 <Item type ="0">
+      <posX>-5.5</posX>
+      <posY>0.26</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>-4.5</posX>
+      <posY>0.26</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>-3.5</posX>
+      <posY>0.26</posY>
+    </Item>
+
+
+    <Item type ="1">
+      <posX>0.5</posX>
+      <posY>-3.26</posY>
+    </Item>
+    <Item type ="0">
+      <posX>1.5</posX>
+      <posY>-3.26</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>2.5</posX>
+      <posY>-3.26</posY>
+    </Item>   
+
+   	<Item type ="0">
+      <posX>2.3</posX>
+      <posY>-1.76</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>3.3</posX>
+      <posY>-1.76</posY>
+    </Item> 
+      <Item type ="0">
+      <posX>4.3</posX>
+      <posY>-1.76</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>4.5</posX>
+      <posY>-1.76</posY>
+    </Item> 
+     
+      <Item type ="0">
+      <posX>5.5</posX>
+      <posY>-0.76</posY>
+    </Item>  
+       <Item type ="1">
+      <posX>6.5</posX>
+      <posY>-0.76</posY>
+    </Item>  
+       <Item type ="0">
+      <posX>7.5</posX>
+      <posY>-0.76</posY>
+    </Item>  
+       <Item type ="0">
+      <posX>8.3</posX>
+      <posY>-0.76</posY>
+    </Item>  	
+
+    <Item type ="0">
+      <posX>0.3</posX>
+      <posY>0.75</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>1.3</posX>
+      <posY>0.75</posY>
+    </Item>  
+
+    <Item type ="0">
+      <posX>-7.5</posX>
+      <posY>-3.26</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>-6.5</posX>
+      <posY>-1.75</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>-7.5</posX>
+      <posY>-0.26</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>-7.5</posX>
+      <posY>1.76</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>-4.5</posX>
+      <posY>1.76</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>-3.5</posX>
+      <posY>1.76</posY>
+    </Item>  
+    <Item type ="1">
+      <posX>-2.5</posX>
+      <posY>1.76</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>-1.5</posX>
+      <posY>1.76</posY>
+    </Item>   	
+
+    <Item type ="0">
+      <posX>-0.7</posX>
+      <posY>3.26</posY>
+    </Item> 
+    <Item type ="0">
+      <posX>0.3</posX>
+      <posY>3.26</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>-3.5</posX>
+      <posY>3.5</posY>
+    </Item>   	
+
+     <Item type ="0">
+      <posX>2.5</posX>
+      <posY>2.26</posY>
+    </Item>
+
+    <Item type ="0">
+      <posX>2.5</posX>
+      <posY>2.26</posY>
+    </Item>   
+
+   	<Item type ="0">
+      <posX>5.5</posX>
+      <posY>-3.26</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>6.0</posX>
+      <posY>-3.26</posY>
+    </Item>   
+
+   	<Item type ="0">
+      <posX>3.5</posX>
+      <posY>-0.26</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>3.3</posX>
+      <posY>3.76</posY>
+    </Item>  
+
+     <Item type ="0">
+      <posX>6.3</posX>
+      <posY>3.76</posY>
+    </Item>   
+    <Item type ="0">
+      <posX>7.3</posX>
+      <posY>3.76</posY>
+    </Item>  
+
+    <Item type ="0">
+      <posX>6.3</posX>
+      <posY>2.26</posY>
+    </Item>   
+
+    <Item type ="0">
+      <posX>4.5</posX>
+      <posY>1.26</posY>
+    </Item> 
+
+    <Item type ="0">
+      <posX>5.3</posX>
+      <posY>1.26</posY>
+    </Item>  
+
+    <Item type ="0">
+      <posX>5.3</posX>
+      <posY>2.76</posY>
+    </Item>  
+    <Item type ="0">
+      <posX>7.5</posX>
+      <posY>0.76</posY>
+    </Item>   	
+
+
+ 	<!-- FLOOR -->
+    <Item type ="0">
+      <posX>-7.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-6.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-5.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-4.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-3.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-2.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-1.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>-0.2</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>0.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>1.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>2.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>3.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>4.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>5.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>6.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+    <Item type ="0">
+      <posX>7.8</posX>
+      <posY>-4.76</posY>
+    </Item>
+
+     <Item type ="1">
+      <posX>-4.5</posX>
+      <posY>3.26</posY>
+    </Item>
+     <Item type ="0">
+      <posX>-5.5</posX>
+      <posY>3.26</posY>
+    </Item>
+    <!-- PLATFORMS -->
+
+     
+  </Items>
+</ItemCollection>
+  

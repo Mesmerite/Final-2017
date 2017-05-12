@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3a93726dda4fd4e7d8fac30e74b81afc
+timeCreated: 1491426809
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - cube: {fileID: 1000012555834074, guid: 01dfa942bdc3241fda9e598b6e1b066f, type: 2}
+  - elecCube: {fileID: 1000013196824882, guid: df95cc6c68324f149b4be4fbb797d0f0, type: 2}
+  - intelBot: {fileID: 1000013550467364, guid: 9552b56cf6a384e4e97bfeaf1095b567, type: 2}
+  - entryDoor: {fileID: 1000011345438756, guid: 8df235afae79845d7844a4bd529f38e0,
+      type: 2}
+  - exitDoor: {fileID: 1000013640938142, guid: 48540d2283f484b90af2e0b002de6589, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
