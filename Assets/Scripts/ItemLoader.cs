@@ -46,7 +46,7 @@ public class ItemLoader : MonoBehaviour {
 	//Levels
 	protected int currentLevel;
 	protected List<int> levelsComplete = new List<int>();
-	protected List<int> unusedLevels = new List<int> (new int[]{ 1, 2, 3, 4, 5});
+	protected List<int> unusedLevels = new List<int> (new int[]{ 1, 2, 3, 4, 5, 6, 7, 8});
 
 	//Life float
 	public int life = 10;
@@ -56,7 +56,6 @@ public class ItemLoader : MonoBehaviour {
 	//Negative
 	public float fear = 0;
 	public float anger = 0;
-	public float sadness = 0;
 	public float disgust = 0;
 
 	//Positive
@@ -103,8 +102,8 @@ public class ItemLoader : MonoBehaviour {
 
 	//Enemies
 	private int enemiesLoaded = 0;
-	//Friend Robots
-	private int robotsLoaded = 0;
+	//Orbs
+	private int orbsLoaded = 0;
 
 	private int buttonIndex;
 
@@ -148,15 +147,12 @@ public class ItemLoader : MonoBehaviour {
 			anger = 20;
 		}
 		//DISGUST
-		if (disgust <= -20) {
-			disgust = -20;
+		if (disgust <= -30) {
+			disgust = -30;
 		}
-		if (disgust >= 20) {
-			disgust = 20;
+		if (disgust >= 30) {
+			disgust = 30;
 		}
-		//SADNESS
-
-
 		//SURPRISE
 		if (surprise <= 0) {
 			surprise = 0;
@@ -188,9 +184,6 @@ public class ItemLoader : MonoBehaviour {
 	}
 	public void changeDisgust(float no2) {
 		disgust += no2;
-	}
-	public void changeSadness(float no3) {
-		sadness += no3;
 	}
 	public void changeSurprise(float no4) {
 		surprise += no4;
@@ -233,15 +226,15 @@ public class ItemLoader : MonoBehaviour {
 
 		//LEVEL LOADING
 		//UNCOMMENT
-		/*
+
 		int randomNo = Random.Range (0, unusedLevels.Count);
 		currentLevel = unusedLevels[randomNo];
 
 		string path = "Level" + currentLevel;
-		*/
+
 		
 		//Load specific level - DON'T USE
-		string path = "Level4";
+		//string path = "Level8";
 	
 
 		Debug.Log(path);
@@ -256,37 +249,37 @@ public class ItemLoader : MonoBehaviour {
 			//------------------------------------------------------ BACKGROUNDS -----------------------------------------------------------
 
 			//DISGUST
-			if (disgust >= 15 && disgust <= 20) {
+			if (disgust >= 20 && disgust <= 30) {
 				if (item.type == 11) {
 					//Red
 					grid.Add (Instantiate (background5, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
-			if (disgust >= 7 && disgust <= 14) {
+			if (disgust >= 10 && disgust <= 19) {
 				if (item.type == 11) {
 					//Orange
 					grid.Add (Instantiate (background7, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
-			if (disgust >= 1 && disgust <= 6) {
+			if (disgust >= 1 && disgust <= 9) {
 				if (item.type == 11) {
 					//Warm red
 					grid.Add (Instantiate (background1, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
-			if (disgust >= -7 && disgust <= 0) {
+			if (disgust >= -9 && disgust <= 0) {
 				if (item.type == 11) {
 					//Purple
 					grid.Add (Instantiate (background3, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
-			if (disgust >= -14 && disgust <= -8) {
+			if (disgust >= -19 && disgust <= -10) {
 				if (item.type == 11) {
 					//Blue
 					grid.Add (Instantiate (background2, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
-			if (disgust >= -20 && disgust <= -15) {
+			if (disgust >= -30 && disgust <= -20) {
 				if (item.type == 11) {
 					//Green
 					grid.Add (Instantiate (background4, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
@@ -304,25 +297,31 @@ public class ItemLoader : MonoBehaviour {
 			//------------------------------------------------------ HEALING ITEMS -----------------------------------------------------------
 
 			//Small healing orb
-			if (happiness <= 7 && fear <= 12) {
-				if (item.type == 7) {
-					grid.Add (Instantiate (orb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
-				} 
+			if (fear <= 8 && happiness <= 6) {
+				if (Random.Range (0, 10) >= 1) {
+					if (item.type == 7) {
+						grid.Add (Instantiate (orb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
+						orbsLoaded++;
+					} 
+				}
 			}
 			//Small/medium
-			if (happiness >= 78 && happiness <= 13 && fear <= 12) {
+			if (happiness >= 7 && happiness <= 13) {
 				if (item.type == 7) {
 					if (Random.Range (0, 10) >= 5) {
 						grid.Add (Instantiate (mediOrb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
+						orbsLoaded++;
 					} else {
 						grid.Add (Instantiate (orb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
+						orbsLoaded++;
 					}
 				}
 			}
 			//Medium healing orb
-			if (happiness >= 14 && happiness <= 20 && fear <= 12) {
-				if (item.type == 24) {
+			if (happiness >= 14 && happiness <= 20) {
+				if (item.type == 7) {
 					grid.Add (Instantiate (mediOrb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
+					orbsLoaded++;
 				}
 			}
 				
@@ -336,40 +335,30 @@ public class ItemLoader : MonoBehaviour {
 			}
 
 			//LOW LEVEL
-			if (fear >= 0 && fear <= 8) {
-				if (item.type == 0) {
-					grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-				} else if (item.type == 1) {
+			if (fear <= 8) {
+				if (item.type == 1) {
 					if (Random.Range (0, 10) >= 7) {
-						grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					} else {
 						grid.Add (Instantiate (elecCube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					} 
+					} else {
+						grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
+					}
 				}
 			}
 			//MIDDLE
 			if (fear >= 9 && fear <= 17) {
-				if (item.type == 0) {
-					grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-				} else if (item.type == 1) {
+				if (item.type == 1) {
 					if (Random.Range (0, 10) >= 5) {
 						grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 					} else {
 						grid.Add (Instantiate (elecCube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					}  
+					}
 				}
 			}
-
+				
 			//HIGH
-			if (fear >= 18 && fear <= 25) {
-				if (item.type == 0) {
-					grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-				} else if (item.type == 1) {
-					if (Random.Range (0, 10) >= 3) {
-						grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					} else {
-						grid.Add (Instantiate (elecCube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					}  
+			if (fear >= 18) {
+				if (item.type == 1) {
+					grid.Add (Instantiate (elecCube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 				}
 			}
 
@@ -412,15 +401,13 @@ public class ItemLoader : MonoBehaviour {
 			if (item.type == 5) {
 				if (Random.Range (0, 10) >= 1) {
 					grid.Add (Instantiate (hostileBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-					IntelBot hostScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-					hostScript.GetPlayer (grid [playerIndex]);
 					enemiesLoaded++;
 				} 
 			} 
 
 			if (anger <= 5) {
 				if (item.type == 4) {
-					if (Random.Range (0, 10) >= 1) {
+					if (Random.Range (0, 10) >= 2) {
 						grid.Add (Instantiate (intelBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 						enemiesLoaded++;
 					} 
@@ -436,8 +423,6 @@ public class ItemLoader : MonoBehaviour {
 				if (item.type == 4) {
 					if (Random.Range (0, 10) >= 6) {
 						grid.Add (Instantiate (hostileBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						IntelBot hostScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-						hostScript.GetPlayer (grid [playerIndex]);
 						enemiesLoaded++;
 					}
 				} else {
@@ -451,8 +436,6 @@ public class ItemLoader : MonoBehaviour {
 				if (item.type == 4) {
 					if (Random.Range (0, 10) >= 8) {
 						grid.Add (Instantiate (hostileBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						IntelBot hostScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-						hostScript.GetPlayer (grid [playerIndex]);
 						enemiesLoaded++;
 					}
 				} else {
@@ -469,8 +452,7 @@ public class ItemLoader : MonoBehaviour {
 			if (item.type == 26) {
 				enemiesLoaded++;
 				grid.Add (Instantiate (idleFlyBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
-				IntelIdle floatScript = grid [grid.Count - 1].GetComponent<IntelIdle> ();
-				floatScript.GetPlayer (grid [playerIndex]);
+
 			}
 	
 
@@ -480,8 +462,7 @@ public class ItemLoader : MonoBehaviour {
 					if (Random.Range (0, 10) >= 1) {
 						enemiesLoaded++;
 						grid.Add (Instantiate (flyBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
-						IntelBot flyScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-						flyScript.GetPlayer (grid [playerIndex]);
+
 					}
 				}
 			}
@@ -490,8 +471,7 @@ public class ItemLoader : MonoBehaviour {
 				if (item.type == 6) {
 					enemiesLoaded++;
 					grid.Add (Instantiate (flyBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
-					IntelBot flyScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-					flyScript.GetPlayer (grid [playerIndex]);
+
 				}
 			}
 			//High
@@ -499,13 +479,9 @@ public class ItemLoader : MonoBehaviour {
 				if (item.type == 6) {
 					if (Random.Range (0, 10) >= 6) {
 						grid.Add (Instantiate (flyBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						IntelBot hostScript = grid [grid.Count - 1].GetComponent<IntelBot> ();
-						hostScript.GetPlayer (grid [playerIndex]);
 						enemiesLoaded++;
 					} else {
 						grid.Add (Instantiate (idleFlyBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						IntelIdle floatScript = grid [grid.Count - 1].GetComponent<IntelIdle> ();
-						floatScript.GetPlayer (grid [playerIndex]);
 						enemiesLoaded++; 
 					}
 				}
@@ -568,7 +544,6 @@ public class ItemLoader : MonoBehaviour {
 			//Friend Bot
 			if (item.type == 21) {
 				grid.Add (Instantiate (friendBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-				robotsLoaded++;
 			}
 		}
 	}
@@ -578,33 +553,36 @@ public class ItemLoader : MonoBehaviour {
 		float remaining = (float)(enemiesLoaded - playerScript.enemiesDestroyed);
 		changeHappiness (remaining);
 		changeFear (- remaining/2);
-	}
-	private void remainingRobots() {
-		ButtonPress buttonScript = GetComponent<ButtonPress> ();
-		float freed = (float)(robotsLoaded- buttonScript.robotsFreed);
-		changeAnger (freed - 3);
-	}
-  
-	private void remainingOrbs() {
-		ButtonPress buttonScript = grid [buttonIndex].GetComponent<ButtonPress> ();
-		float left = (float)(robotsLoaded- buttonScript.robotsFreed);
-		changeAnger (left + 2);
+		changeDisgust (- remaining);
 	}
 
-	//
+	private void remainingOrbs() {
+		PlayerControl playerScript = grid [buttonIndex].GetComponent<PlayerControl> ();
+		float left = (float)(orbsLoaded- playerScript.orbsCollected);
+		changeAnger (+left/2);
+		changeDisgust (+1);
+	}
+
+	//Endings
+	//Good
 	void decideEnding() {
-		if(happiness >= 10 || anger <= 9) {
+		if(disgust <= -10) {
 			SceneManager.LoadScene (4);
 		}
-		if(anger >= 10) {
+		//Neutral
+		if(disgust >= -9 && disgust <= 10) {
+			SceneManager.LoadScene (6);
+		}
+		//Bad
+
+		if(disgust >= 11 && disgust <= 30) {
 			SceneManager.LoadScene (5);
 		}
 	}
 
 	protected void destroyLevel(){
 		remainingEnemies ();
-		//remainingRobots ();
-		//remainingOrbs ();
+		remainingOrbs ();
 
 		//UNCOMMENT
 
@@ -620,9 +598,9 @@ public class ItemLoader : MonoBehaviour {
 		for (int i = 0; i < grid.Count; i++) {
 			Destroy (grid [i]);
 		}
-
+			
 		grid.Clear ();
 		enemiesLoaded = 0;
-		robotsLoaded = 0;
+		orbsLoaded = 0;
 	}
 }

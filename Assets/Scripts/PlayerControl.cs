@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour {
 
 	//Enemies
 	public int enemiesDestroyed = 0;
+	public int orbsCollected = 0;
 
 	//Ground ray
 	public Transform ground;
@@ -124,12 +125,15 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.lifeMeter (+2);
 			itemLoader.changeSurprise (+2);
 			itemLoader.changeDisgust (-2);
+			orbsCollected++;
 		} else if (interaction2 == true) {
 			Destroy (itemHit.collider.gameObject);
 			itemLoader.lifeMeter (+4);
 			itemLoader.changeSurprise (+4);
 			itemLoader.changeDisgust (-2);
+			orbsCollected++;
 		}
+
 
 
 		//Destroying enemies
@@ -139,6 +143,7 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeFear (+3);
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
+			itemLoader.changeHappiness (-3);
 			anime.SetBool ("Attacking", true);
 		} else {
 			anime.SetBool ("Attacking", false);
@@ -149,6 +154,8 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeFear (+2);
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
+			itemLoader.changeHappiness (-2);
+
 			anime.SetBool ("Attacking", true);
 		} else {
 			anime.SetBool ("Attacking", false);
@@ -159,6 +166,7 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeFear (+1);
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
+			itemLoader.changeHappiness (-1);
 			anime.SetBool ("Attacking", true);
 		} else {
 			anime.SetBool ("Attacking", false);

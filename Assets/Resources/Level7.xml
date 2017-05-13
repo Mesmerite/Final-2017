@@ -46,39 +46,9 @@
     </Item>
       <Item type ="10">
       <posX>7.23</posX>
-      <posY>-3.0</posY>
+      <posY>-4.0</posY>
     </Item>
-
-    <!-- ENEMIES -->
-
-    <Item type ="4">
-		<posX>-7.26</posX>
-		<posY>-4.15</posY>
-	</Item>	
-	<Item type ="4">
-		<posX>4.9</posX>
-		<posY>-1.64</posY>
-	</Item>
-
-    <Item type ="26">
-      <posX>0.0</posX>
-      <posY>0.86</posY>
-    </Item>
-
-    <Item type ="6">
-      <posX>4.0</posX>
-      <posY>4.4</posY>
-    </Item>
-
-    <Item type ="4">
-      <posX>-6.1</posX>
-      <posY>2.36</posY>
-    </Item>
-
-    <Item type ="4">
-      <posX>2.0</posX>
-      <posY>-4.15</posY>
-    </Item>
+   
 
     <!-- FRIEND BOT -->
     <Item type ="21">
@@ -183,14 +153,14 @@
       <posX>4.9</posX>
       <posY>-0.5</posY>
     </Item>
-    <Item type ="12">
-      <posX>7.05</posX>
-      <posY>-4.01</posY>
-    </Item>
 
-     <Item type ="12">
-      <posX>7.05</posX>
-      <posY>-4.01</posY>
+    <Item type ="12">
+      <posX>5.3</posX>
+      <posY>-4.0</posY>
+    </Item>
+    <Item type ="12">
+      <posX>4.5</posX>
+      <posY>-4.0</posY>
     </Item>
 
 
@@ -360,15 +330,7 @@
       <posX>-7.5</posX>
       <posY>3.75</posY>
     </Item>
-    <Item type ="0">
-      <posX>7.25</posX>
-      <posY>-3.75</posY>
-    </Item>
 
-    <Item type ="0">
-      <posX>7.3</posX>
-      <posY>-3.25</posY>
-    </Item>
 
      <Item type ="0">
       <posX>2.7</posX>
@@ -382,6 +344,11 @@
     <Item type ="0">
       <posX>6.25</posX>
       <posY>2.75</posY>
+    </Item>
+
+     <Item type ="0">
+      <posX>4.5</posX>
+      <posY>-3.75</posY>
     </Item>
 
  	<!-- FLOOR -->
@@ -425,7 +392,7 @@
       <posX>1.8</posX>
       <posY>-4.76</posY>
     </Item>
-    <Item type ="0">
+    <Item type ="2">
       <posX>2.8</posX>
       <posY>-4.76</posY>
     </Item>
@@ -437,7 +404,7 @@
       <posX>4.8</posX>
       <posY>-4.76</posY>
     </Item>
-    <Item type ="2">
+    <Item type ="0">
       <posX>5.8</posX>
       <posY>-4.76</posY>
     </Item>
@@ -450,6 +417,36 @@
       <posY>-4.76</posY>
     </Item>
 
+    <!-- ENEMIES -->
+
+    <Item type ="4">
+		<posX>-7.26</posX>
+		<posY>-4.15</posY>
+	</Item>	
+	<Item type ="4">
+		<posX>4.9</posX>
+		<posY>-1.64</posY>
+	</Item>
+
+    <Item type ="26">
+      <posX>0.0</posX>
+      <posY>0.86</posY>
+    </Item>
+
+    <Item type ="4">
+      <posX>-6.1</posX>
+      <posY>2.36</posY>
+    </Item>
+
+    <Item type ="4">
+      <posX>1.1</posX>
+      <posY>-4.15</posY>
+    </Item>
+
+    <Item type ="6">
+      <posX>4.0</posX>
+      <posY>4.4</posY>
+    </Item>
 
   </Items>
 </ItemCollection>

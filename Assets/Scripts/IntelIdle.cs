@@ -19,6 +19,9 @@ public class IntelIdle : MonoBehaviour {
 	void Update () {
 		Physics2D.IgnoreLayerCollision(8, 11);
 		Physics2D.IgnoreLayerCollision(11, 12);
+		if (Player == null) {
+			findPlayer ();
+		}
 		timer--;
 		if (playerRange () && playerSeen()) {
 			Debug.Log ("Player Targeted");

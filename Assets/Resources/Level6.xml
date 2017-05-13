@@ -34,45 +34,6 @@
       <posY>2.0</posY>
     </Item>
 
-    <!-- ENEMIES -->
-     <Item type ="4">
-      <posX>-4.6</posX>
-      <posY>-2.15</posY>
-    </Item>
-    <Item type ="4">
-      <posX>2.3</posX>
-      <posY>-2.15</posY>
-    </Item>
-     <Item type ="4">
-      <posX>-1.25</posX>
-      <posY>-0.65</posY>
-    </Item>
-    <Item type ="4">
-      <posX>-7.3</posX>
-      <posY>-4.15</posY>
-    </Item>
-
-     <Item type ="4">
-      <posX>-4.6</posX>
-      <posY>1.87</posY>
-    </Item>
-    <Item type ="4">
-      <posX>2.3</posX>
-      <posY>1.87</posY>
-    </Item>
-
-    <Item type ="4">
-      <posX>2.3</posX>
-      <posY>-2.15</posY>
-    </Item>
-
-   	 <Item type ="6">
-      <posX>-1.3</posX>
-      <posY>4.5</posY>
-    </Item>
-
-
-
   	<!-- DOORS -->
      <Item type ="9">
       <posX>0.0</posX>
@@ -388,6 +349,52 @@
       <posY>-4.76</posY>
     </Item>
 
+    <!-- ENEMIES -->
+     <Item type ="4">
+      <posX>-4.6</posX>
+      <posY>-2.15</posY>
+    </Item>
+    <Item type ="4">
+      <posX>2.3</posX>
+      <posY>-2.15</posY>
+    </Item>
+     <Item type ="4">
+      <posX>-1.25</posX>
+      <posY>-0.65</posY>
+    </Item>
+    <Item type ="4">
+      <posX>-7.3</posX>
+      <posY>-4.15</posY>
+    </Item>
+
+     <Item type ="4">
+      <posX>-4.6</posX>
+      <posY>1.87</posY>
+    </Item>
+    <Item type ="4">
+      <posX>2.3</posX>
+      <posY>1.87</posY>
+    </Item>
+
+    <Item type ="4">
+      <posX>2.3</posX>
+      <posY>-2.15</posY>
+    </Item>
+
+    <Item type ="4">
+      <posX>2.3</posX>
+      <posY>-2.15</posY>
+    </Item>
+
+     <Item type ="26">
+      <posX>0.0</posX>
+      <posY>-2.15</posY>
+    </Item>
+
+   	 <Item type ="6">
+      <posX>-1.3</posX>
+      <posY>4.5</posY>
+    </Item>
   
   </Items>
 </ItemCollection>

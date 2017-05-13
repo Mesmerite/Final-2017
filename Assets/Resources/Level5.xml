@@ -5,8 +5,8 @@
   	
   	<!-- PLAYER -->
   	<Item type ="3">
-      <posX>-7.2</posX>
-      <posY>-4.1</posY>
+      <posX>-2.3</posX>
+      <posY>-4.09</posY>
     </Item>
 
     <!-- BACKGROUND -->
@@ -14,25 +14,7 @@
       <posX>-0.01</posX>
       <posY>-0.04</posY>
     </Item> 
-
-    <!-- ENEMIES -->
-    <Item type ="4">
-      <posX>-3.95</posX>
-      <posY>-1.16</posY>
-    </Item>
-     <Item type ="4">
-      <posX>-4.3</posX>
-      <posY>2.37</posY>
-    </Item>
-   	 <Item type ="4">
-      <posX>0.3</posX>
-      <posY>-2.65</posY>
-    </Item>
-
-    <Item type ="26">
-      <posX>6.5</posX>
-      <posY>-1.5</posY>
-    </Item>
+   
 
     <!-- ITEMS -->
    	<Item type ="7">
@@ -46,6 +28,11 @@
      <Item type ="7">
       <posX>6.4</posX>
       <posY>3.0</posY>
+    </Item>
+
+    <Item type ="7">
+      <posX>0.7</posX>
+      <posY>-4.0</posY>
     </Item>
 
     <!-- BUTTONS -->
@@ -218,7 +205,7 @@
       <posX>-0.7</posX>
       <posY>-0.76</posY>
     </Item>
-    <Item type ="0">
+    <Item type ="1">
       <posX>0.3</posX>
       <posY>-0.76</posY>
     </Item>
@@ -237,7 +224,7 @@
     </Item>
 
 
-    <Item type ="1">
+    <Item type ="0">
       <posX>0.5</posX>
       <posY>-3.26</posY>
     </Item>
@@ -480,8 +467,29 @@
       <posX>-5.5</posX>
       <posY>3.26</posY>
     </Item>
-    <!-- PLATFORMS -->
 
+    <!-- ENEMIES -->
+    <Item type ="4">
+      <posX>-3.95</posX>
+      <posY>-1.16</posY>
+    </Item>
+     <Item type ="4">
+      <posX>-4.3</posX>
+      <posY>2.37</posY>
+    </Item>
+   	 <Item type ="4">
+      <posX>0.3</posX>
+      <posY>-2.65</posY>
+    </Item>
+     <Item type ="4">
+      <posX>3.0</posX>
+      <posY>-4.15</posY>
+    </Item>
+
+    <Item type ="26">
+      <posX>6.5</posX>
+      <posY>-1.5</posY>
+    </Item>
      
   </Items>
 </ItemCollection>
