@@ -226,15 +226,15 @@ public class ItemLoader : MonoBehaviour {
 
 		//LEVEL LOADING
 		//UNCOMMENT
-
+		/*
 		int randomNo = Random.Range (0, unusedLevels.Count);
 		currentLevel = unusedLevels[randomNo];
 
 		string path = "Level" + currentLevel;
-
+		*/
 		
 		//Load specific level - DON'T USE
-		//string path = "Level8";
+		string path = "Level6";
 	
 
 		Debug.Log(path);
@@ -297,8 +297,8 @@ public class ItemLoader : MonoBehaviour {
 			//------------------------------------------------------ HEALING ITEMS -----------------------------------------------------------
 
 			//Small healing orb
-			if (fear <= 8 && happiness <= 6) {
-				if (Random.Range (0, 10) >= 1) {
+			if (happiness <= 6) {
+				if (Random.Range (0, 10) >= 8) {
 					if (item.type == 7) {
 						grid.Add (Instantiate (orb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
 						orbsLoaded++;
@@ -424,11 +424,11 @@ public class ItemLoader : MonoBehaviour {
 					if (Random.Range (0, 10) >= 6) {
 						grid.Add (Instantiate (hostileBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 						enemiesLoaded++;
-					}
-				} else {
-					if (item.type == 4) {
-						grid.Add (Instantiate (intelBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						enemiesLoaded++; 
+					} else {
+						if (item.type == 4) {
+							grid.Add (Instantiate (intelBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
+							enemiesLoaded++; 
+						}
 					}
 				}
 			}
@@ -437,11 +437,11 @@ public class ItemLoader : MonoBehaviour {
 					if (Random.Range (0, 10) >= 8) {
 						grid.Add (Instantiate (hostileBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 						enemiesLoaded++;
-					}
-				} else {
-					if (item.type == 4) {
-						grid.Add (Instantiate (intelBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
-						enemiesLoaded++; 
+					} else {
+						if (item.type == 4) {
+							grid.Add (Instantiate (intelBot, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
+							enemiesLoaded++; 
+						}
 					}
 				}
 			}
@@ -586,7 +586,7 @@ public class ItemLoader : MonoBehaviour {
 
 		//UNCOMMENT
 
-		unusedLevels.Remove (currentLevel);
+		//unusedLevels.Remove (currentLevel);
 
 
 		if (unusedLevels.Count <= 0) {
