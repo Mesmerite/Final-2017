@@ -124,13 +124,19 @@ public class PlayerControl : MonoBehaviour {
 			Destroy (itemHit.collider.gameObject);
 			itemLoader.lifeMeter (+2);
 			itemLoader.changeSurprise (+2);
+			itemLoader.changeHappiness(+1);
 			itemLoader.changeDisgust (-2);
+			itemLoader.changeAnger (-2);
+			itemLoader.changeFear (-1);
 			orbsCollected++;
 		} else if (interaction2 == true) {
 			Destroy (itemHit.collider.gameObject);
-			itemLoader.lifeMeter (+4);
-			itemLoader.changeSurprise (+4);
+			itemLoader.lifeMeter (+3);
+			itemLoader.changeHappiness(+1);
+			itemLoader.changeSurprise (+3);
 			itemLoader.changeDisgust (-2);
+			itemLoader.changeAnger (-2);
+			itemLoader.changeFear (-1);
 			orbsCollected++;
 		}
 
@@ -144,6 +150,7 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
 			itemLoader.changeHappiness (-3);
+			itemLoader.changeSurprise (-2);
 			anime.SetBool ("Attacking", true);
 		} else {
 			anime.SetBool ("Attacking", false);
@@ -155,6 +162,7 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
 			itemLoader.changeHappiness (-2);
+			itemLoader.changeSurprise (-2);
 
 			anime.SetBool ("Attacking", true);
 		} else {
@@ -167,6 +175,7 @@ public class PlayerControl : MonoBehaviour {
 			itemLoader.changeAnger (+2);
 			itemLoader.changeDisgust (+2);
 			itemLoader.changeHappiness (-1);
+			itemLoader.changeSurprise (-2);
 			anime.SetBool ("Attacking", true);
 		} else {
 			anime.SetBool ("Attacking", false);
@@ -220,6 +229,9 @@ public class PlayerControl : MonoBehaviour {
 		if(col.gameObject.tag == "Bullet" || col.gameObject.tag == "Enemy" || col.gameObject.tag == "BadGround")
 		{
 			itemLoader.lifeMeter (-1);
+		}
+		if (col.gameObject.tag == "BadGround2") {
+			life = life - 2;
 		}
 	}
 

@@ -1,22 +1,24 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BasicPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/XMLScript.xml">
     <Files>
-      <File FileName="Assets/Scripts/BasicPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ItemLoader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Level8.xml" Line="42" Column="12" />
-      <File FileName="Assets/Resources/Level7.xml" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Level6.xml" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TextContainer.cs" Line="23" Column="3" NotebookId="1" />
-      <File FileName="Assets/Resources/XMLScript.xml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/ItemContainer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="../ItemDatabase/Assets/Resources/item2.xml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="../ItemDatabase/Assets/Resources/item3.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Resources/Level7.xml" Line="155" Column="12" />
+      <File FileName="Assets/Resources/Level6.xml" Line="379" Column="1" />
+      <File FileName="Assets/Scripts/IntelIdle.cs" Line="23" Column="18" />
+      <File FileName="Assets/Resources/Level1.xml" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Level2.xml" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/IntelBot.cs" Line="25" Column="8" />
+      <File FileName="Assets/Resources/Level4.xml" Line="176" Column="16" />
+      <File FileName="Assets/Scripts/PlayerControl.cs" Line="226" Column="4" />
+      <File FileName="Assets/Scripts/LifeHUD.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/ItemContainer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Level3.xml" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Level8.xml" Line="244" Column="19" />
       <File FileName="Assets/Scripts/IntelEnemy.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/ButtonPress.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/ButtonPress.cs" Line="21" Column="36" NotebookId="1" />
       <File FileName="Assets/Scripts/BadButton.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/Resources/Level5.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Resources/XMLScript.xml" Line="21" Column="148" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

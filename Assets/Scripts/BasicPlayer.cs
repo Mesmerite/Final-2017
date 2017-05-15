@@ -58,16 +58,11 @@ public class BasicPlayer : MonoBehaviour {
 			dead = true;
 			deathTime = Time.time; //Moment since scene has been loaded
 			Debug.Log ("Dead");
-			//BasicPlayer playerScript = GetComponent<BasicPlayer> ();
 			GameOver ();
 		}
 		if (dead == true && Time.time >= 1.2f + deathTime) {
 			SceneManager.LoadScene (2);
 		}
-
-
-		//IntelEnemy intelScript = GetComponent<IntelEnemy> ();
-		//intelScript.Explode ();
 	}
 
 	//Life function
@@ -172,6 +167,9 @@ public class BasicPlayer : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "BadGround")
 		{
 			life = life - 1;
+		}
+		if (col.gameObject.tag == "BadGround2") {
+			life = life - 2;
 		}
 	}
 

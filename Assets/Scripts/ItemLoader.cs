@@ -225,16 +225,14 @@ public class ItemLoader : MonoBehaviour {
 		}
 
 		//LEVEL LOADING
-		//UNCOMMENT
-		/*
+
 		int randomNo = Random.Range (0, unusedLevels.Count);
 		currentLevel = unusedLevels[randomNo];
 
 		string path = "Level" + currentLevel;
-		*/
 		
-		//Load specific level - DON'T USE
-		string path = "Level6";
+		//Load specific level - TESTING ONLY
+		//string path = "Level6";
 	
 
 		Debug.Log(path);
@@ -298,7 +296,7 @@ public class ItemLoader : MonoBehaviour {
 
 			//Small healing orb
 			if (happiness <= 6) {
-				if (Random.Range (0, 10) >= 8) {
+				if (Random.Range (0, 10) >= 7) {
 					if (item.type == 7) {
 						grid.Add (Instantiate (orb, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);	
 						orbsLoaded++;
@@ -387,7 +385,7 @@ public class ItemLoader : MonoBehaviour {
 			//HIGH
 			if (fear >= 18) {
 				if (item.type == 2) {
-					if (Random.Range (0, 10) >= 3) {
+					if (Random.Range (0, 10) >= 2) {
 						grid.Add (Instantiate (spikeCube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
 					} else {
 						grid.Add (Instantiate (cube, new Vector3 (item.posX, item.posY, 0), Quaternion.Euler (0, 0, 0)) as GameObject);
@@ -551,16 +549,22 @@ public class ItemLoader : MonoBehaviour {
 	private void remainingEnemies() {
 		PlayerControl playerScript = grid [playerIndex].GetComponent<PlayerControl> ();
 		float remaining = (float)(enemiesLoaded - playerScript.enemiesDestroyed);
-		changeHappiness (remaining);
-		changeFear (- remaining/2);
-		changeDisgust (- remaining);
+		changeHappiness (+(remaining));
+		changeSurprise (+(remaining - 2));
+		changeFear (-remaining-2);
+		changeFear (-remaining-1);
+		changeDisgust (-remaining);
 	}
 
 	private void remainingOrbs() {
 		PlayerControl playerScript = grid [buttonIndex].GetComponent<PlayerControl> ();
 		float left = (float)(orbsLoaded- playerScript.orbsCollected);
-		changeAnger (+left/2);
-		changeDisgust (+1);
+		changeHappiness (-(left));
+		changeSurprise (-(left -1));
+		changeFear (+(left-2));
+		changeAnger (+(left-2));
+		changeDisgust (left);
+
 	}
 
 	//Endings
@@ -581,24 +585,22 @@ public class ItemLoader : MonoBehaviour {
 	}
 
 	protected void destroyLevel(){
+		//Count objects left
 		remainingEnemies ();
 		remainingOrbs ();
+		//Levels
+		unusedLevels.Remove (currentLevel);
 
-		//UNCOMMENT
-
-		//unusedLevels.Remove (currentLevel);
-
-
+		//Endings
 		if (unusedLevels.Count <= 0) {
 			PlayerPrefs.SetInt ("Final Health",life);
 			decideEnding ();
 		}
 
-
+		//Clear level
 		for (int i = 0; i < grid.Count; i++) {
 			Destroy (grid [i]);
-		}
-			
+		}	
 		grid.Clear ();
 		enemiesLoaded = 0;
 		orbsLoaded = 0;

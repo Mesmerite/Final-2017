@@ -5,8 +5,6 @@ public class ButtonPress : MonoBehaviour {
 
 	public GameObject player;
 
-	public int robotsFreed = 0;
-
 	public bool raiseHappy = false;
 
 
@@ -25,8 +23,10 @@ public class ButtonPress : MonoBehaviour {
 			Destroy (GameObject.FindWithTag ("Pillar"));
 			Debug.Log ("Pillar Deletion");
 			itemLoader.changeSurprise (+5);
-			itemLoader.changeDisgust (-4);
-			robotsFreed++;
+			itemLoader.changeSurprise (+5);
+			itemLoader.changeDisgust (+4);
+			itemLoader.changeFear (-4);
+			itemLoader.changeFear (-4);
 		}
 	}
 }
